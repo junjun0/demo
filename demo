@@ -4,19 +4,6 @@
 		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
 		<meta charset="UTF-8">
 
-//3、 滚动条滚动 --  找到当前楼层的索引    控制楼层号
-$(window).scroll(function() {
-    //如果flag  为true   可以执行滚动条的代码
-    if (flag) {
-
-        //获取页面滚走的距离
-        var sTop = $(document).scrollTop();
-        //filter  返回满足条件的那个对象 
-        //找到满足某个条件的楼层对象    
-        var $floor = $(".Louti").filter(function(index, ele) {
-            return Math.abs($(this).offset().top - sTop) < $(this).height() / 2;
-        })
-
         //根据楼层的索引 设置楼梯号的 样式
         $("#menu li").eq($floor.index())
             .find("span")
