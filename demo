@@ -4,16 +4,6 @@
 		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
 		<meta charset="UTF-8">
 
-        //根据楼层的索引 设置楼梯号的 样式
-        $("#menu li").eq($floor.index())
-            .find("span")
-            .addClass("active")
-            .end()
-            .siblings()
-            .find("span")
-            .removeClass("active");
-    }
-})
 
 
 		</script>
